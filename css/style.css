@@ -1,7 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&display=swap');
 
-:root{
+:root {
     font-size: 62.5%;
     --bg: #F9F4FB;
     --title: #B52184;
@@ -11,7 +10,7 @@
     --bg-card: #FFF;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,30 +18,31 @@
     font-family: 'Mulish', sans-serif;
 }
 
-main{
+main {
     background-color: var(--bg);
 }
 
-section{
+section {
     padding: 2.5rem;
 }
 
-h1{
+h1 {
     font-size: 3rem;
     color: var(--title);
     font-weight: 900;
 }
 
-h2{
-    font-size: 2.5rem;;
+h2 {
+    font-size: 2.5rem;
+    ;
     color: var(--title);
 }
 
-p{
+p {
     color: var(--text);
 }
 
-.explore{
+.explore {
     padding-top: 0;
     display: flex;
     flex-direction: column;
@@ -50,32 +50,35 @@ p{
     justify-content: center;
 }
 
-.explore h1{
-    margin-top: 1rem;;
+.explore .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+
 }
 
-.explore p{
-    margin-bottom: 2.5rem;
-}
-
-.explore img:last-child{
+.explore img:last-child {
     width: 3.5rem;
+    margin-top: 3rem;
 }
 
-.cards-list{
+.cards-list {
     background: linear-gradient(to right, var(--linear-s), var(--linear-e));
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 4rem;
     gap: 2rem;
+    padding: 4rem 4rem;
 }
 
-.cards-list p{
+.cards-list p {
     font-size: 1.5rem;
 }
 
-.card{
+.card {
     background-color: var(--bg-card);
     border-radius: 1rem;
     padding: 2rem;
@@ -86,10 +89,138 @@ p{
     gap: 2rem;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 4rem;
 }
 
+.field {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.field input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 4rem;
+    border-radius: 2rem;
+    border: 2px solid var(--linear-s);
+    outline: 0;
+    background-color: transparent;
+    color: var(--text);
+}
+
+.field textarea {
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1rem;
+    ;
+    border: 2px solid var(--linear-s);
+    outline: 0;
+    background-color: transparent;
+    color: var(--text)
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: var(--text);
+}
+
+.field img {
+    position: absolute;
+    left: 0.75rem;
+
+}
+
+.area-form>img {
+    visibility: hidden;
+    display: none;
+}
+
+form button {
+    place-self: flex-start;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background: linear-gradient(to right, var(--linear-s), var(--linear-e));
+    color: var(--bg);
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    outline: 0;
+    transition: background-color 0.3s;
+}
+
+footer {
+    background-color: var(--title);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: var(--bg);
+}
+
+@media (min-width: 768px) {
+
+    :root {
+        font-size: 72.5%;
+    }
+
+    .explore {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: end;
+    }
+
+    .explore>img{
+        width: 38rem;
+    }
+
+    .explore .content {
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .explore .content>img{
+        margin-top: 7rem;
+    }
+
+    .cards-list {
+        gap: 4rem;
+    }
+
+    .cards-list .card {
+        max-width: 30rem;
+    }
+
+    .contact {
+        padding: 0;
+    }
+
+    .contact form {
+        width: 50%;
+        padding: 7rem;
+        align-self: center;
+    }
+
+    .area-form {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+    }
+
+    .area-form>img {
+        width: 50%;
+        visibility: visible;
+        display: block;
+    }
+}
